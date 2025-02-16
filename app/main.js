@@ -57,5 +57,6 @@ for(const element of arr){
 }
 
 const manager = new Manager(managerArray);
-const questionArea = new QuestionArea('question');
-const answersArea = new AnswersArea('answer-area');
+const questionArea = new QuestionArea('question', manager);
+const answersArea = new AnswersArea('answer-area', manager);
+manager.start()
