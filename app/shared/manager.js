@@ -29,6 +29,10 @@ class Manager{
         this.#finishCallback = callback;
     }
 
+    add(question){
+        this.#array.push(question);
+    }
+
     nextQuestion(answer){
         this.#selectedAnswer[this.#currentQuestionNumber] = answer;
         this.#currentQuestionNumber++;
