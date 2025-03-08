@@ -1,11 +1,11 @@
-<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>136</x><y>104</y><w>336</w><h>88</h></coordinates><panel_attributes>Question
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>121</y><w>462</w><h>121</h></coordinates><panel_attributes>Question
 --
 &lt;&lt;get&gt;&gt; - questionText: String
 &lt;&lt;get&gt;&gt; - answers: String[]
 &lt;&lt;get&gt;&gt; - rightAnswer: String
 --
 + constructor(questionText: String, answers: String[], rightAnswer: String)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>320</y><w>288</w><h>184</h></coordinates><panel_attributes>Manager
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>748</x><y>418</y><w>396</w><h>253</h></coordinates><panel_attributes>Manager
 --
 - currentQuestionNumber: number
 - selectedAnswers: Object
@@ -19,21 +19,40 @@
 + setFinishCallback(cb: FinishCallback): void
 + nextQuestion(answer: string): void
 + start(): void
-+ add (question: Question): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>144</y><w>232</w><h>296</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
++ add (question: Question): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>451</x><y>176</y><w>319</w><h>407</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
 array
-m1= *</panel_attributes><additional_attributes>10;10;130;10;130;350;270;350</additional_attributes></element><element><id>UMLClass</id><coordinates><x>696</x><y>560</y><w>240</w><h>88</h></coordinates><panel_attributes>Area
+m1= *</panel_attributes><additional_attributes>10;10;130;10;130;350;270;350</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>748</y><w>330</w><h>121</h></coordinates><panel_attributes>Area
 --
 &lt;&lt;get&gt;&gt; - div: HtmlDivElement
 --
 + constructor(cssClass: string, manager: Manager)
 - getContainer(): HtmlDivElement
 - getFinishCallback(containerDiv: HtmlDivElement): FinishCallback
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>392</x><y>672</y><w>328</w><h>56</h></coordinates><panel_attributes>QuestionArea
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>902</y><w>451</w><h>77</h></coordinates><panel_attributes>QuestionArea
 --
 + constructor(className: sring, manager: Manager)
 - getNextQuestionCallback(): NextQuestionCallback
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1032</x><y>664</y><w>240</w><h>88</h></coordinates><panel_attributes>AnswersArea
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1232</x><y>891</y><w>330</w><h>121</h></coordinates><panel_attributes>AnswersArea
 --
 + constructor(className: string, manager: Manager)
 - getNextAnswerCallback(): NextAnswersCallback
-- clickOnAnswerCard(answer: string): EventListenerCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>512</x><y>496</y><w>240</w><h>192</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>280;10;280;50;10;50;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>912</x><y>496</y><w>280</w><h>184</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;50;330;50;330;210</additional_attributes></element><element><id>Relation</id><coordinates><x>816</x><y>496</y><w>24</w><h>80</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>816</x><y>640</y><w>232</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;270;80</additional_attributes></element><element><id>Relation</id><coordinates><x>712</x><y>640</y><w>96</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;80;10;80</additional_attributes></element></diagram>
+- clickOnAnswerCard(answer: string): EventListenerCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>660</y><w>330</w><h>264</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>280;10;280;50;10;50;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>1067</x><y>660</y><w>385</w><h>253</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;50;330;50;330;210</additional_attributes></element><element><id>Relation</id><coordinates><x>935</x><y>660</y><w>33</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>935</x><y>858</y><w>319</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80;270;80</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>858</y><w>132</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;80;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1133</x><y>462</y><w>253</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;170;70;170;10;210;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1364</x><y>396</y><w>803</w><h>209</h></coordinates><panel_attributes>FormController
+--
++ constructor(manager: Manager, fieldsConfig: {id: string, label: string})
+- submitCallback(): EventListenerCallback
+- validateFields(): boolean
+- getValueObject(): {questionText: string, answer1: string, answer2: string, answer3: string, answer4: string, rightAnswer: string}
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2365</x><y>121</y><w>495</w><h>242</h></coordinates><panel_attributes>FormField
+--
+&lt;&lt;get&gt;&gt; - id: string
+- inputElement: HtmlInputElement
+- labelElement: HtmlLabelElement
+- errorField: HtmlSpanElement
+--
+&lt;&lt;get&gt;&gt; value: String
+&lt;&lt;set&gt;&gt;error(value:string)
+--
++ constructor(id: string, labelContent: string)
++ getDivElement(): HtmlDivElement</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2156</x><y>198</y><w>231</w><h>319</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+formFieldArray
+m1= *</panel_attributes><additional_attributes>190;10;60;10;60;270;10;270</additional_attributes></element></diagram>
