@@ -11,10 +11,13 @@ class Manager{
 
     #finishCallback;
 
+    #addCallback;
+
     constructor(array = []){
         this.#array = array;
         this.#currentQuestionNumber = 0;
         this.#selectedAnswer={};
+        this.#addCallback = ()=>{};
     }
 
     setNextQuestionCallback(callback){
@@ -29,8 +32,13 @@ class Manager{
         this.#finishCallback = callback;
     }
 
+    setAddCallback(callback){
+        this.#addCallback = callback;
+    }
+
     add(question){
         this.#array.push(question);
+        this.#addCallback(question);
     }
 
     nextQuestion(answer){

@@ -8,4 +8,5 @@ const formFields = [
   ];
 
   const manager = new Manager();
+  const table = new Table(manager);
   const form = new FormController(manager,formFields);
