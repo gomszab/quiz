@@ -5,7 +5,7 @@
 &lt;&lt;get&gt;&gt; - rightAnswer: String
 --
 + constructor(questionText: String, answers: String[], rightAnswer: String)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>748</x><y>594</y><w>396</w><h>297</h></coordinates><panel_attributes>Manager
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>748</x><y>550</y><w>396</w><h>341</h></coordinates><panel_attributes>Manager
 --
 - currentQuestionNumber: number
 - selectedAnswers: Object
@@ -22,7 +22,8 @@
 + setFinishCallback(cb: FinishCallback): void
 + nextQuestion(answer: string): void
 + start(): void
-+ add (question: Question): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>451</x><y>396</y><w>319</w><h>407</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
++ add (question: Question): void
++ generateExportString() : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>451</x><y>396</y><w>319</w><h>407</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
 array
 m1= *</panel_attributes><additional_attributes>10;10;130;10;130;350;270;350</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>968</y><w>330</w><h>121</h></coordinates><panel_attributes>Area
 --

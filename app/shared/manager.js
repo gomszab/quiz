@@ -58,6 +58,14 @@ class Manager{
         }
     }
 
+    generateExportString(){
+        let result = [];
+        for(const question of this.#array){
+            result.push(`${question.questionText};${question.answers.join(';')};${question.rightAnswer}`)
+        }
+        return result.join('\n');
+    }
+
     start(){
         this.#nextQuestionCallback(this.#array[this.#currentQuestionNumber].questionText);
         this.#nextAnswersCallback(this.#array[this.#currentQuestionNumber].answers);
